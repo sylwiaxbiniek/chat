@@ -1,0 +1,5 @@
+dist: bionic
+language: java
+after_success:
+  - ./gradlew jacocoTestReport
+  - bash <(curl -s https://codecov.io/bash)

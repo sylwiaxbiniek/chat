@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'jacoco'
+    id 'org.springframework.boot' version '2.2.1.RELEASE'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'com.google.guava:guava:28.0-jre'
+
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+application {
+    mainClassName = 'chat.App'
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+    }
+}
