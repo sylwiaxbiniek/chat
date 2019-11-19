@@ -12,15 +12,14 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'com.google.guava:guava:28.0-jre'
+    implementation 'org.springframework.boot:spring-boot-starter-websocket'
 
     testImplementation 'junit:junit:4.12'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 application {
-    mainClassName = 'chat.App'
+    mainClassName = 'chat.Chat'
 }
 
 jacocoTestReport {
